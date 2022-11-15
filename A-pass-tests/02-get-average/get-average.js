@@ -2,6 +2,8 @@
 // return the average of all the numbers
 // be sure to exclude the strings
 
-function average(numbers) {}
-
+function average(numbers) {
+  let numbersArray = numbers.filter((elt) => typeof elt === "number");
+  return numbersArray.reduce((num, sum) => sum + num) / numbersArray.length;
+}
 module.exports = average;
